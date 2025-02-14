@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Start your business hassle-free with our all-in-one incorporation platform. Join the waitlist for exclusive perks and early access.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Start Your Business Hassle-Free – Join the Waitlist">
+    <meta property="og:description" content="Incorporate your company with ease. Get exclusive perks, banking setup, and compliance support from day one.">
+    <meta property="og:type" content="website">
+    
+    <title>Start Your Business Hassle-Free – Join the Waitlist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="language-btn active" onclick="setLanguage('en')">EN</button>
+        <button class="language-btn" onclick="setLanguage('nl')">NL</button>
+        <button class="language-btn" onclick="setLanguage('fr')">FR</button>
+    </div>
+
+    <header class="hero">
+        <div class="container">
+            <h1 data-i18n="title">Start Your Business Hassle-Free – Join the Waitlist Now!</h1>
+            <p class="subheadline" data-i18n="subheadline">Incorporate your company with ease. Get exclusive perks, banking setup, and compliance support from day one.</p>
+            <button class="cta-button" id="joinWaitlistBtn" data-i18n="joinWaitlist">Join the Waitlist</button>
+        </div>
+    </header>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 data-i18n="whyJoinUs">Why Join Us?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <img src="images/fast-icon.svg" alt="Fast incorporation">
+                    <h3 data-i18n="fastIncorporation">Fast and Easy Business Incorporation</h3>
+                    <p data-i18n="fastIncorporationDesc">Available for residents & non-residents</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="images/rewards-icon.svg" alt="Exclusive rewards">
+                    <h3 data-i18n="exclusiveRewards">Exclusive Rewards</h3>
+                    <p data-i18n="exclusiveRewardsDesc">Early customers get discounts and partner perks</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="images/solution-icon.svg" alt="Full service">
+                    <h3 data-i18n="fullService">Full-Service Solution</h3>
+                    <p data-i18n="fullServiceDesc">Tax, banking, compliance, legal—one platform</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="images/support-icon.svg" alt="Concierge support">
+                    <h3 data-i18n="conciergeSupport">Concierge-Based Onboarding</h3>
+                    <p data-i18n="conciergeSupportDesc">Get human support from the start</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2 data-i18n="howItWorks">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <h3 data-i18n="step1Title">Sign up for early access</h3>
+                    <p data-i18n="step1Desc">Join our exclusive waitlist</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <h3 data-i18n="step2Title">Get notified at launch</h3>
+                    <p data-i18n="step2Desc">Early adopters get exclusive deals</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <h3 data-i18n="step3Title">Incorporate seamlessly</h3>
+                    <p data-i18n="step3Desc">With our full-service support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-signals">
+        <div class="container">
+            <h2 data-i18n="trustedPartners">Trusted Partners</h2>
+            <div class="partner-logos">
+                <img src="images/stripe-logo.svg" alt="Stripe">
+                <img src="images/wise-logo.svg" alt="Wise">
+                <img src="images/revolut-logo.svg" alt="Revolut">
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2 data-i18n="faq">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 data-i18n="faqQuestion1">Who is this platform for?</h3>
+                    <p data-i18n="faqAnswer1">Entrepreneurs looking to incorporate their business quickly and efficiently, whether they're residents or non-residents.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 data-i18n="faqQuestion2">What countries do you support?</h3>
+                    <p data-i18n="faqAnswer2">We currently support incorporations in major business hubs. Full list coming soon.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 data-i18n="faqQuestion3">What's included in the Rewards program?</h3>
+                    <p data-i18n="faqAnswer3">Early adopters get exclusive discounts, partner perks, and priority support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 data-i18n="footerTitle">BusinessLaunch</h3>
+                    <p data-i18n="footerSubtitle">Your all-in-one incorporation platform</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:contact@businesslaunch.com">contact@businesslaunch.com</a>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Waitlist Modal -->
+    <div class="modal" id="waitlistModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 data-i18n="modalTitle">Join the Waitlist</h2>
+            <form id="waitlistForm">
+                <input type="email" id="emailInput" data-i18n="emailPlaceholder" placeholder="Enter your email" required>
+                <button type="submit" class="cta-button" data-i18n="joinWaitlist">Join the Waitlist</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
