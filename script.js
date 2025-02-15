@@ -4,6 +4,17 @@ let currentLanguage = 'en';
 function setLanguage(lang) {
     currentLanguage = lang;
     document.documentElement.setAttribute('lang', lang);
+    
+    // Update active state of language buttons
+    const languageButtons = document.querySelectorAll('.language-btn');
+    languageButtons.forEach(button => {
+        if (button.textContent.toLowerCase() === lang.toLowerCase()) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+    
     updateContent();
 }
 
@@ -51,4 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const supportedLanguages = ['en', 'nl', 'fr'];
     const initialLang = supportedLanguages.includes(browserLang) ? browserLang : 'en';
     setLanguage(initialLang);
+
+    // Set current year in footer
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
 }); 
