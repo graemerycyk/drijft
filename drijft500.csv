@@ -1,13 +1,13 @@
 ﻿Startup,Stage,Category,Website,Crunchbase,Region,Founded,Why we picked them
-Collibra,Series G,Data intelligence,https://www.collibra.com,https://www.crunchbase.com/organization/collibra,Brussels,2008,Great product great team great market,
-Odoo,Series D,Business management,https://www.odoo.com,https://www.crunchbase.com/organization/odoo,Ramillies,2005,Impressive growth great founder,
-Showpad,Series B,Sales enablement,https://www.showpad.com,https://www.crunchbase.com/organization/showpad,Ghent,2011,Moved to profitability after improving efficiency,
-Deliverect,Series D,Restaurant tech,https://www.deliverect.com,https://www.crunchbase.com/organization/deliverect,Ghent,2018,Fast growth during COVID unicorn status and interesting acqusitions,
-Sparkcentral,Series B,Customer engagement,https://www.sparkcentral.com,https://www.crunchbase.com/organization/sparkcentral,Hasselt,2012,Great product great team great market,
-NGData,Series B,Customer data,https://www.ngdata.com,https://www.crunchbase.com/organization/ngdata,Ghent,2012,Great product great team great market,
-Teamleader,Series C,Business management,https://www.teamleader.eu,https://www.crunchbase.com/organization/teamleader,Ghent,2012,Great product great team great market,
-Sortlist,Series B,B2B marketing marketplace,https://www.sortlist.com,https://www.crunchbase.com/organization/sortlist,Brussels,2014,Great product great team great market,
-Silverfin,Series B,Accounting platform,https://www.silverfin.com,https://www.crunchbase.com/organization/silverfin,Ghent,2013,Great product great team great market,
-Unifly,Series B,Drone traffic management,https://www.unifly.aero,https://www.crunchbase.com/organization/unifly,Antwerp,2015,Great product great team great market,
-Akido,Series A,AI powered security software,https://www.akido.dev,https://www.crunchbase.com/organization/akido,Ghent,2023,Great founding team solid investors and great product,
-Tally,Bootstrapped,Form builders,https://www.tally.so,https://www.crunchbase.com/organization/tally,Ghent,2019,Great product great team great market,
+Collibra,Series G,Enterprise data management,https://www.collibra.com,https://www.crunchbase.com/organization/collibra,Brussels,2008,Great product great team great market
+Odoo,Series F,Enterprise SaaS,https://www.odoo.com,https://www.crunchbase.com/organization/odoo,Ramillies,2005,Impressive growth great founder
+Showpad,Series D,Enterprise SaaS,https://www.showpad.com,https://www.crunchbase.com/organization/showpad,Ghent,2011,Moved to profitability after improving efficiency
+Deliverect,Series D,Enterprise SaaS,https://www.deliverect.com,https://www.crunchbase.com/organization/deliverect,Ghent,2018,Fast growth during COVID unicorn status and interesting acquisitions
+Sparkcentral,Series B,Customer support and success,https://www.sparkcentral.com,https://www.crunchbase.com/organization/sparkcentral,Hasselt,2012,Great product great team great market
+NGData,Series C,Enterprise data management,https://www.ngdata.com,https://www.crunchbase.com/organization/ngdata,Ghent,2012,Great product great team great market
+Teamleader,Series C,Enterprise SaaS,https://www.teamleader.eu,https://www.crunchbase.com/organization/teamleader,Ghent,2012,Great product great team great market
+Sortlist,Series A,Enterprise SaaS,https://www.sortlist.com,https://www.crunchbase.com/organization/sortlist,Brussels,2014,Great product great team great market
+Silverfin,Series B,Fintech,https://www.silverfin.com,https://www.crunchbase.com/organization/silverfin,Ghent,2013,Great product great team great market
+Unifly,Series B,Transportation,https://www.unifly.aero,https://www.crunchbase.com/organization/unifly,Antwerp,2015,Great product great team great market
+Akido,Series A,Cybersecurity,https://www.akido.dev,https://www.crunchbase.com/organization/akido,Ghent,2023,Great founding team solid investors and great product
+Tally,Pre-seed,Enterprise SaaS,https://www.tally.so,https://www.crunchbase.com/organization/tally,Ghent,2019,Great product great team great market
