@@ -1,4 +1,4 @@
-# BusinessLaunch - Multi-language Landing Page
+# drijft - Multi-language Landing Page
 
 A modern, responsive landing page for a business incorporation platform with multi-language support (English, Dutch, and French).
 

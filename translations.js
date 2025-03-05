@@ -38,7 +38,7 @@ const translations = {
         faqAnswer3: "Early adopters get exclusive discounts, partner perks, and priority support.",
         
         // Footer
-        footerTitle: "BusinessLaunch",
+        footerTitle: "drijft",
         footerSubtitle: "Your all-in-one incorporation platform",
         
         // Modal
@@ -84,7 +84,7 @@ const translations = {
         faqAnswer3: "Vroege gebruikers krijgen exclusieve kortingen, partnervoordelen en prioriteitsondersteuning.",
         
         // Footer
-        footerTitle: "BusinessLaunch",
+        footerTitle: "drijft",
         footerSubtitle: "Uw alles-in-één oprichtingsplatform",
         
         // Modal
@@ -130,7 +130,7 @@ const translations = {
         faqAnswer3: "Les premiers utilisateurs obtiennent des remises exclusives, des avantages partenaires et un support prioritaire.",
         
         // Footer
-        footerTitle: "BusinessLaunch",
+        footerTitle: "drijft",
         footerSubtitle: "Votre plateforme tout-en-un de constitution",
         
         // Modal
