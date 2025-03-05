@@ -221,11 +221,11 @@
 
     <section class="drijft500-hero">
         <div class="container">
-            <h1>Welcome to the drijft 500!</h1>
-            <p>The most important startups in Belgium.</p>
-            <p>These are the top private, bootstrapped or venture-backed companies that the drijft team believes are to be the most successful, as determined by IPO, exit value or profitability.</p>
-            <p class="contact">Continuously updated. Contact the team at <a href="mailto:500@drijft.be" style="color: white;">500@drijft.be</a>.</p>
-            <p class="count"><span id="startup-count">0</span> startups have been added to date.</p>
+            <h1 data-i18n="drijft500Title">Welcome to the drijft 500!</h1>
+            <p data-i18n="drijft500Subtitle">The most important startups in Belgium.</p>
+            <p data-i18n="drijft500Description">These are the top private, bootstrapped or venture-backed companies that the drijft team believes are to be the most successful, as determined by IPO, exit value or profitability.</p>
+            <p class="contact"><span data-i18n="drijft500Contact">Continuously updated. Contact the team at</span> <a href="mailto:500@drijft.be" style="color: white;">500@drijft.be</a>.</p>
+            <p class="count"><span id="startup-count">0</span> <span data-i18n="drijft500Count">startups have been added to date.</span></p>
         </div>
     </section>
 
@@ -233,14 +233,14 @@
         <table class="drijft500-table">
             <thead>
                 <tr>
-                    <th>Startup</th>
-                    <th>Stage</th>
-                    <th>Category</th>
-                    <th>Website</th>
-                    <th>Crunchbase</th>
-                    <th>Region</th>
-                    <th>Founded</th>
-                    <th>Why we picked them</th>
+                    <th data-i18n="tableStartup">Startup</th>
+                    <th data-i18n="tableStage">Stage</th>
+                    <th data-i18n="tableCategory">Category</th>
+                    <th data-i18n="tableWebsite">Website</th>
+                    <th data-i18n="tableCrunchbase">Crunchbase</th>
+                    <th data-i18n="tableRegion">Region</th>
+                    <th data-i18n="tableFounded">Founded</th>
+                    <th data-i18n="tableWhyPicked">Why we picked them</th>
                 </tr>
             </thead>
             <tbody id="startup-table-body">
@@ -255,33 +255,34 @@
             <div class="footer-section">
                 <a href="index.html" class="footer-logo">
                     <img src="images/logo.webp" alt="drijft logo" width="24" height="24">
-                    <strong>drijft</strong>
+                    <strong data-i18n="footerTitle">drijft</strong>
                 </a>
-                <p class="footer-description">
+                <p class="footer-description" data-i18n="footerDescription">
                     Located in Antwerp, Belgium, we specialize in Full-Stack Product Development Services.
                 </p>
                 <p class="footer-copyright">
-                    &copy; <span id="current-year"></span> <a href="index.html" class="link">drijft</a><br>
+                    &copy; <span id="current-year"></span> <a href="index.html" class="link" data-i18n="footerTitle">drijft</a><br>
                     All Rights Reserved
                 </p>
                 <p class="footer-links">
-                    <a href="tos.html" class="link">Terms of Service</a> |
-                    <a href="privacy.html" class="link">Privacy Policy</a>
+                    <a href="tos.html" class="link" data-i18n="footerTerms">Terms of Service</a> |
+                    <a href="privacy.html" class="link" data-i18n="footerPrivacy">Privacy Policy</a>
                 </p>
             </div>
             <div class="footer-section">
-                <div class="footer-title">Resources</div>
+                <div class="footer-title" data-i18n="footerResources">Resources</div>
                 <div class="footer-links">
-                    <a href="index.html" class="link">Home</a>
+                    <a href="index.html" class="link" data-i18n="footerHome">Home</a>
                 </div>
-                <div class="footer-title" style="margin-top: 1rem;">Help</div>
+                <div class="footer-title" style="margin-top: 1rem;" data-i18n="footerHelp">Help</div>
                 <div class="footer-help">
-                    <a href="mailto:support@drijft.be" class="link">Contact Support</a>
+                    <a href="mailto:support@drijft.be" class="link" data-i18n="footerSupport">Contact Support</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script>
         // Function to load and parse CSV data
         async function loadStartupData() {
@@ -325,13 +326,16 @@
                         <td><a href="${row[3]}" target="_blank" rel="noopener noreferrer">${row[0]}</a></td>
                         <td>${row[1]}</td>
                         <td><span class="category-chip" data-category="${row[2]}">${row[2]}</span></td>
-                        <td><a href="${row[3]}" target="_blank" rel="noopener noreferrer">${row[3].replace(/^https?:\/\//, '')}</a></td>
+                        <td><a href="${row[3]}" target="_blank" rel="noopener noreferrer">${row[3].replace(/^https?:\/\//, '').replace(/^www\./, '')}</a></td>
                         <td><a href="${row[4]}" target="_blank" rel="noopener noreferrer">View</a></td>
                         <td>${row[5]}</td>
                         <td>${row[6]}</td>
                         <td>${row[7]}</td>
                     </tr>
                 `).join('');
+
+                // Update translations after loading data
+                updateContent();
             } catch (error) {
                 console.error('Error loading startup data:', error);
             }
@@ -342,6 +346,48 @@
 
         // Load data when page loads
         document.addEventListener('DOMContentLoaded', loadStartupData);
+
+        // Language handling
+        let currentLanguage = 'en';
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            document.documentElement.setAttribute('lang', lang);
+            
+            // Update active state of language buttons
+            const languageButtons = document.querySelectorAll('.language-btn');
+            languageButtons.forEach(button => {
+                if (button.textContent.toLowerCase() === lang.toLowerCase()) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+            
+            updateContent();
+        }
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLanguage][key]) {
+                    if (element.tagName === 'INPUT' && element.getAttribute('placeholder')) {
+                        element.placeholder = translations[currentLanguage][key];
+                    } else {
+                        element.textContent = translations[currentLanguage][key];
+                    }
+                }
+            });
+        }
+
+        // Initialize language based on browser preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const browserLang = navigator.language.split('-')[0];
+            const supportedLanguages = ['en', 'nl', 'fr'];
+            const initialLang = supportedLanguages.includes(browserLang) ? browserLang : 'en';
+            setLanguage(initialLang);
+        });
     </script>
 </body>
 </html>

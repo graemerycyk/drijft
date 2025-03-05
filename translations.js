@@ -43,7 +43,33 @@ const translations = {
         
         // Modal
         modalTitle: "Join the Waitlist",
-        emailPlaceholder: "Enter your email"
+        emailPlaceholder: "Enter your email",
+
+        // drijft500 Page
+        drijft500Title: "Welcome to the drijft 500!",
+        drijft500Subtitle: "The most important startups in Belgium.",
+        drijft500Description: "These are the top private, bootstrapped or venture-backed companies that the drijft team believes are to be the most successful, as determined by IPO, exit value or profitability.",
+        drijft500Contact: "Continuously updated. Contact the team at",
+        drijft500Count: "startups have been added to date.",
+        
+        // Table Headers
+        tableStartup: "Startup",
+        tableStage: "Stage",
+        tableCategory: "Category",
+        tableWebsite: "Website",
+        tableCrunchbase: "Crunchbase",
+        tableRegion: "Region",
+        tableFounded: "Founded",
+        tableWhyPicked: "Why we picked them",
+        
+        // Footer drijft500
+        footerDescription: "Located in Antwerp, Belgium, we specialize in Full-Stack Product Development Services.",
+        footerResources: "Resources",
+        footerHome: "Home",
+        footerHelp: "Help",
+        footerSupport: "Contact Support",
+        footerTerms: "Terms of Service",
+        footerPrivacy: "Privacy Policy"
     },
     nl: {
         // Header
@@ -89,7 +115,33 @@ const translations = {
         
         // Modal
         modalTitle: "Schrijf Je In",
-        emailPlaceholder: "Voer je e-mail in"
+        emailPlaceholder: "Voer je e-mail in",
+
+        // drijft500 Page
+        drijft500Title: "Welkom bij de drijft 500!",
+        drijft500Subtitle: "De belangrijkste startups in België.",
+        drijft500Description: "Dit zijn de top private, bootstrapped of venture-backed bedrijven waarvan het drijft team gelooft dat ze het meest succesvol zullen zijn, bepaald door IPO, exit waarde of winstgevendheid.",
+        drijft500Contact: "Continu bijgewerkt. Neem contact op met het team via",
+        drijft500Count: "startups zijn tot nu toe toegevoegd.",
+        
+        // Table Headers
+        tableStartup: "Startup",
+        tableStage: "Fase",
+        tableCategory: "Categorie",
+        tableWebsite: "Website",
+        tableCrunchbase: "Crunchbase",
+        tableRegion: "Regio",
+        tableFounded: "Opgericht",
+        tableWhyPicked: "Waarom we ze kozen",
+        
+        // Footer drijft500
+        footerDescription: "Gevestigd in Antwerpen, België, zijn we gespecialiseerd in Full-Stack Product Development Services.",
+        footerResources: "Bronnen",
+        footerHome: "Home",
+        footerHelp: "Help",
+        footerSupport: "Contact Support",
+        footerTerms: "Algemene Voorwaarden",
+        footerPrivacy: "Privacybeleid"
     },
     fr: {
         // Header
@@ -135,6 +187,32 @@ const translations = {
         
         // Modal
         modalTitle: "Rejoindre la Liste",
-        emailPlaceholder: "Entrez votre email"
+        emailPlaceholder: "Entrez votre email",
+
+        // drijft500 Page
+        drijft500Title: "Bienvenue sur le drijft 500!",
+        drijft500Subtitle: "Les startups les plus importantes de Belgique.",
+        drijft500Description: "Ce sont les meilleures entreprises privées, bootstrapped ou financées par du capital-risque que l'équipe drijft considère comme les plus prometteuses, déterminées par leur IPO, valeur de sortie ou rentabilité.",
+        drijft500Contact: "Mis à jour en continu. Contactez l'équipe à",
+        drijft500Count: "startups ont été ajoutées à ce jour.",
+        
+        // Table Headers
+        tableStartup: "Startup",
+        tableStage: "Étape",
+        tableCategory: "Catégorie",
+        tableWebsite: "Site Web",
+        tableCrunchbase: "Crunchbase",
+        tableRegion: "Région",
+        tableFounded: "Fondée",
+        tableWhyPicked: "Pourquoi nous les avons choisis",
+        
+        // Footer drijft500
+        footerDescription: "Situé à Anvers, Belgique, nous sommes spécialisés dans les Services de Développement Full-Stack.",
+        footerResources: "Ressources",
+        footerHome: "Accueil",
+        footerHelp: "Aide",
+        footerSupport: "Contacter le Support",
+        footerTerms: "Conditions d'Utilisation",
+        footerPrivacy: "Politique de Confidentialité"
     }
 }; 
