@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The drijft 500 - The most important startups in Belgium">
+    
+    <title>The drijft 500 - Most Important Belgian Startups</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Specific styles for drijft500 page */
+        .drijft500-hero {
+            background: linear-gradient(135deg, #1a365d, #2563eb);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .drijft500-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .drijft500-hero p {
+            font-size: 1.125rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+        }
+
+        .drijft500-hero .contact {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+        }
+
+        .drijft500-hero .count {
+            margin-top: 2rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .table-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            overflow-x: auto;
+        }
+
+        .drijft500-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .drijft500-table th,
+        .drijft500-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .drijft500-table th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #1f2937;
+            white-space: nowrap;
+        }
+
+        .drijft500-table tr:hover {
+            background: #f8fafc;
+        }
+
+        .drijft500-table td {
+            color: #374151;
+        }
+
+        .rank {
+            font-weight: 600;
+            color: #2563eb;
+        }
+
+        @media (max-width: 768px) {
+            .drijft500-hero h1 {
+                font-size: 2rem;
+            }
+
+            .drijft500-hero p {
+                font-size: 1rem;
+            }
+
+            .table-container {
+                margin: 1rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="language-btn active" onclick="setLanguage('en')">EN</button>
+        <button class="language-btn" onclick="setLanguage('nl')">NL</button>
+        <button class="language-btn" onclick="setLanguage('fr')">FR</button>
+    </div>
+
+    <section class="drijft500-hero">
+        <div class="container">
+            <h1>Welcome to the drijft 500!</h1>
+            <p>The most important startups in Belgium.</p>
+            <p>These are the top private, bootstrapped or venture-backed companies that the drijft team believes are to be the most successful, as determined by IPO, exit value or profitability.</p>
+            <p class="contact">Continuously updated. Contact the team at <a href="mailto:500@drijft.be" style="color: white;">500@drijft.be</a>.</p>
+            <p class="count"><span id="startup-count">0</span> startups have been added to date.</p>
+        </div>
+    </section>
+
+    <div class="table-container">
+        <table class="drijft500-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Company</th>
+                    <th>Description</th>
+                    <th>Location</th>
+                    <th>Founded</th>
+                    <th>Employees</th>
+                    <th>Funding</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody id="startup-table-body">
+                <!-- Table content will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="#" class="footer-logo">
+                    <img src="images/logo.webp" alt="drijft logo" width="24" height="24">
+                    <strong>drijft</strong>
+                </a>
+                <p class="footer-description">
+                    Located in Antwerp, Belgium, we specialize in Full-Stack Product Development Services.
+                </p>
+                <p class="footer-copyright">
+                    &copy; <span id="current-year"></span> <a href="#" class="link">drijft</a><br>
+                    All Rights Reserved
+                </p>
+                <p class="footer-links">
+                    <a href="tos.html" class="link">Terms of Service</a> |
+                    <a href="privacy.html" class="link">Privacy Policy</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <div class="footer-title">Help</div>
+                <div class="footer-help">
+                    <a href="mailto:support@drijft.be" class="link">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to load and parse CSV data
+        async function loadStartupData() {
+            try {
+                const response = await fetch('drijft500.csv');
+                const csvText = await response.text();
+                const rows = csvText.split('\n').map(row => row.split(','));
+                const headers = rows[0];
+                const data = rows.slice(1).filter(row => row.length === headers.length);
+
+                // Update startup count
+                document.getElementById('startup-count').textContent = data.length;
+
+                // Populate table
+                const tableBody = document.getElementById('startup-table-body');
+                tableBody.innerHTML = data.map((row, index) => `
+                    <tr>
+                        <td class="rank">${index + 1}</td>
+                        <td>${row[0]}</td>
+                        <td>${row[1]}</td>
+                        <td>${row[2]}</td>
+                        <td>${row[3]}</td>
+                        <td>${row[4]}</td>
+                        <td>${row[5]}</td>
+                        <td>${row[6]}</td>
+                    </tr>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading startup data:', error);
+            }
+        }
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Load data when page loads
+        document.addEventListener('DOMContentLoaded', loadStartupData);
+    </script>
+</body>
+</html>
