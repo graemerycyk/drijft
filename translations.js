@@ -1,29 +1,29 @@
 const translations = {
     en: {
         // Header
-        title: "Start Your Business Hassle-Free – Join the Waitlist Now!",
-        subheadline: "Incorporate your company with ease. Get exclusive perks, banking setup, and compliance support from day one.",
+        title: "Incorporate Your Belgian Business – Join the Waitlist Now!",
+        subheadline: "Get expert, concierge-based support for your company formation—from notary coordination and banking guidance to compliance and tax reminders.",
         joinWaitlist: "Join the Waitlist",
         
         // Benefits Section
         whyJoinUs: "Why Join Us?",
-        fastIncorporation: "Fast and Easy Business Incorporation",
-        fastIncorporationDesc: "Available for residents & non-residents",
-        exclusiveRewards: "Exclusive Rewards",
-        exclusiveRewardsDesc: "Early customers get discounts and partner perks",
-        fullService: "Full-Service Solution",
-        fullServiceDesc: "Tax, banking, compliance, legal—one platform",
-        conciergeSupport: "Concierge-Based Onboarding",
-        conciergeSupportDesc: "Get human support from the start",
+        expertIncorporation: "Expert Incorporation Guidance",
+        expertIncorporationDesc: "Receive personalized, step-by-step support to register your company with all required Belgian authorities.",
+        complianceTax: "Comprehensive Compliance & Tax Support",
+        complianceTaxDesc: "Stay on track with VAT registration, tax filings, and legal requirements with our easy-to-follow reminders.",
+        bankingOffice: "Banking & Registered Office Assistance",
+        bankingOfficeDesc: "Get guidance on opening your business bank account and setting up a virtual registered office in Belgium.",
+        conciergeOnboarding: "Concierge-Based Onboarding",
+        conciergeOnboardingDesc: "Enjoy hands-on support at every step—from intake to notary coordination and beyond.",
         
         // How It Works
         howItWorks: "How It Works",
-        step1Title: "Sign up for early access",
-        step1Desc: "Join our exclusive waitlist",
-        step2Title: "Get notified at launch",
-        step2Desc: "Early adopters get exclusive deals",
-        step3Title: "Incorporate seamlessly",
-        step3Desc: "With our full-service support",
+        step1Title: "Sign Up & Complete Our Intake Form",
+        step1Desc: "Join our waitlist and provide key details about you and your business for a tailored incorporation experience.",
+        step2Title: "Receive Personalized Guidance",
+        step2Desc: "Our expert team will review your application and guide you through notary coordination, banking setup, and compliance steps.",
+        step3Title: "Launch Your Belgian Business",
+        step3Desc: "With all required documents filed and support in place, you're ready to start your business seamlessly.",
         
         // Trust Signals
         trustedPartners: "Trusted Partners",
@@ -31,18 +31,25 @@ const translations = {
         // FAQ
         faq: "Frequently Asked Questions",
         faqQuestion1: "Who is this platform for?",
-        faqAnswer1: "Entrepreneurs looking to incorporate their business quickly and efficiently, whether they're residents or non-residents.",
+        faqAnswer1: "Entrepreneurs looking to incorporate their business in Belgium with personalized, expert guidance—from formation and notary coordination to banking and compliance.",
         faqQuestion2: "What countries do you support?",
-        faqAnswer2: "We currently support incorporations in major business hubs. Full list coming soon.",
-        faqQuestion3: "What's included in the Rewards program?",
-        faqAnswer3: "Early adopters get exclusive discounts, partner perks, and priority support.",
+        faqAnswer2: "Our service is currently focused on Belgian incorporations. Future plans include expanding to select Anglophone and low-tax jurisdictions.",
+        faqQuestion3: "What exclusive benefits do early adopters receive?",
+        faqAnswer3: "Early waitlist members gain access to personalized support, exclusive partner discounts, and priority onboarding for a smooth start.",
         
         // Footer
         footerTitle: "drijft",
-        footerSubtitle: "Your all-in-one incorporation platform",
+        footerSubtitle: "Your all-in-one platform for expert Belgian business incorporation.",
+        footerResources: "Resources",
+        footerHome: "Home",
+        footerHelp: "Help",
+        footerSupport: "Contact Support",
+        footerTerms: "Terms of Service",
+        footerPrivacy: "Privacy Policy",
         
         // Modal
         modalTitle: "Join the Waitlist",
+        modalDesc: "Enter your email to secure early access to our comprehensive Belgian incorporation platform, complete with personalized guidance for company formation, banking, compliance, and more.",
         emailPlaceholder: "Enter your email",
 
         // drijft500 Page
@@ -82,29 +89,29 @@ const translations = {
     },
     nl: {
         // Header
-        title: "Start Uw Bedrijf Zonder Zorgen – Schrijf Je Nu In!",
-        subheadline: "Richt uw bedrijf moeiteloos op. Ontvang exclusieve voordelen, bankrekening setup en compliance ondersteuning vanaf dag één.",
+        title: "Start Uw Belgisch Bedrijf – Schrijf Je Nu In!",
+        subheadline: "Krijg deskundige, persoonlijke ondersteuning bij uw bedrijfsoprichting—van notariscoördinatie en bankbegeleiding tot compliance en belastingherinneringen.",
         joinWaitlist: "Schrijf Je In",
         
         // Benefits Section
         whyJoinUs: "Waarom Ons Kiezen?",
-        fastIncorporation: "Snelle en Eenvoudige Bedrijfsoprichting",
-        fastIncorporationDesc: "Beschikbaar voor inwoners & niet-inwoners",
-        exclusiveRewards: "Exclusieve Beloningen",
-        exclusiveRewardsDesc: "Vroege klanten krijgen kortingen en partnervoordelen",
-        fullService: "Complete Service Oplossing",
-        fullServiceDesc: "Belasting, bankieren, compliance, juridisch—één platform",
-        conciergeSupport: "Persoonlijke Ondersteuning",
-        conciergeSupportDesc: "Krijg menselijke ondersteuning vanaf het begin",
+        expertIncorporation: "Deskundige Oprichtingsbegeleiding",
+        expertIncorporationDesc: "Ontvang persoonlijke, stapsgewijze ondersteuning bij de registratie van uw bedrijf bij alle vereiste Belgische instanties.",
+        complianceTax: "Uitgebreide Compliance & Belastingondersteuning",
+        complianceTaxDesc: "Blijf op schema met BTW-registratie, belastingaangiften en wettelijke vereisten met onze eenvoudig te volgen herinneringen.",
+        bankingOffice: "Bank- & Maatschappelijke Zetel Assistentie",
+        bankingOfficeDesc: "Krijg begeleiding bij het openen van uw zakelijke bankrekening en het opzetten van een virtuele maatschappelijke zetel in België.",
+        conciergeOnboarding: "Persoonlijke Onboarding",
+        conciergeOnboardingDesc: "Geniet van ondersteuning bij elke stap—van intake tot notariscoördinatie en verder.",
         
         // How It Works
         howItWorks: "Hoe Het Werkt",
-        step1Title: "Schrijf je in voor vroege toegang",
-        step1Desc: "Word lid van onze exclusieve wachtlijst",
-        step2Title: "Ontvang bericht bij lancering",
-        step2Desc: "Vroege gebruikers krijgen exclusieve deals",
-        step3Title: "Richt naadloos op",
-        step3Desc: "Met onze volledige ondersteuning",
+        step1Title: "Schrijf Je In & Vul Ons Intakeformulier In",
+        step1Desc: "Word lid van onze wachtlijst en verstrek belangrijke gegevens over u en uw bedrijf voor een op maat gemaakte oprichtingservaring.",
+        step2Title: "Ontvang Persoonlijke Begeleiding",
+        step2Desc: "Ons expertteam beoordeelt uw aanvraag en begeleidt u door notariscoördinatie, banksetup en compliance-stappen.",
+        step3Title: "Start Uw Belgische Bedrijf",
+        step3Desc: "Met alle vereiste documenten ingediend en ondersteuning op zijn plaats, bent u klaar om naadloos te starten.",
         
         // Trust Signals
         trustedPartners: "Vertrouwde Partners",
@@ -112,18 +119,25 @@ const translations = {
         // FAQ
         faq: "Veelgestelde Vragen",
         faqQuestion1: "Voor wie is dit platform bedoeld?",
-        faqAnswer1: "Ondernemers die hun bedrijf snel en efficiënt willen oprichten, zowel inwoners als niet-inwoners.",
+        faqAnswer1: "Ondernemers die hun bedrijf in België willen oprichten met persoonlijke, deskundige begeleiding—van oprichting en notariscoördinatie tot bankieren en compliance.",
         faqQuestion2: "Welke landen ondersteunen jullie?",
-        faqAnswer2: "We ondersteunen momenteel oprichtingen in belangrijke zakelijke centra. Volledige lijst komt binnenkort.",
-        faqQuestion3: "Wat zit er in het Beloningsprogramma?",
-        faqAnswer3: "Vroege gebruikers krijgen exclusieve kortingen, partnervoordelen en prioriteitsondersteuning.",
+        faqAnswer2: "Onze service is momenteel gericht op Belgische oprichtingen. Toekomstplannen omvatten uitbreiding naar geselecteerde Engelstalige en lage-belastingjurisdicties.",
+        faqQuestion3: "Welke exclusieve voordelen krijgen vroege gebruikers?",
+        faqAnswer3: "Vroege wachtlijstleden krijgen toegang tot persoonlijke ondersteuning, exclusieve partnerkortingen en prioritaire onboarding voor een soepele start.",
         
         // Footer
         footerTitle: "drijft",
-        footerSubtitle: "Uw alles-in-één oprichtingsplatform",
+        footerSubtitle: "Uw alles-in-één platform voor deskundige Belgische bedrijfsoprichting.",
+        footerResources: "Bronnen",
+        footerHome: "Home",
+        footerHelp: "Help",
+        footerSupport: "Contact Support",
+        footerTerms: "Algemene Voorwaarden",
+        footerPrivacy: "Privacybeleid",
         
         // Modal
         modalTitle: "Schrijf Je In",
+        modalDesc: "Voer uw e-mail in om vroege toegang te krijgen tot ons uitgebreide Belgische oprichtingsplatform, compleet met persoonlijke begeleiding voor bedrijfsoprichting, bankieren, compliance en meer.",
         emailPlaceholder: "Voer je e-mail in",
 
         // drijft500 Page
@@ -163,29 +177,29 @@ const translations = {
     },
     fr: {
         // Header
-        title: "Lancez Votre Entreprise Sans Tracas – Inscrivez-vous à la Liste d'Attente!",
-        subheadline: "Constituez votre entreprise en toute simplicité. Obtenez des avantages exclusifs, la configuration bancaire et le support de conformité dès le premier jour.",
+        title: "Constituez Votre Entreprise Belge – Inscrivez-vous Maintenant!",
+        subheadline: "Bénéficiez d'un accompagnement expert et personnalisé pour la constitution de votre entreprise—de la coordination notariale et bancaire aux rappels de conformité et fiscaux.",
         joinWaitlist: "Rejoindre la Liste",
         
         // Benefits Section
         whyJoinUs: "Pourquoi Nous Choisir?",
-        fastIncorporation: "Constitution Rapide et Facile",
-        fastIncorporationDesc: "Disponible pour résidents et non-résidents",
-        exclusiveRewards: "Récompenses Exclusives",
-        exclusiveRewardsDesc: "Les premiers clients obtiennent des remises et avantages",
-        fullService: "Solution Complète",
-        fullServiceDesc: "Fiscal, bancaire, conformité, juridique—une plateforme",
-        conciergeSupport: "Service Conciergerie",
-        conciergeSupportDesc: "Obtenez un support humain dès le début",
+        expertIncorporation: "Accompagnement Expert en Constitution",
+        expertIncorporationDesc: "Recevez un soutien personnalisé et étape par étape pour enregistrer votre entreprise auprès de toutes les autorités belges requises.",
+        complianceTax: "Support Complet en Conformité & Fiscalité",
+        complianceTaxDesc: "Restez à jour avec l'enregistrement TVA, les déclarations fiscales et les exigences légales grâce à nos rappels faciles à suivre.",
+        bankingOffice: "Assistance Bancaire & Siège Social",
+        bankingOfficeDesc: "Obtenez des conseils pour l'ouverture de votre compte bancaire professionnel et la mise en place d'un siège social virtuel en Belgique.",
+        conciergeOnboarding: "Accompagnement Personnalisé",
+        conciergeOnboardingDesc: "Profitez d'un support à chaque étape—de l'admission à la coordination notariale et au-delà.",
         
         // How It Works
         howItWorks: "Comment Ça Marche",
-        step1Title: "Inscrivez-vous pour un accès anticipé",
-        step1Desc: "Rejoignez notre liste d'attente exclusive",
-        step2Title: "Soyez notifié au lancement",
-        step2Desc: "Les premiers utilisateurs obtiennent des offres exclusives",
-        step3Title: "Constituez sans effort",
-        step3Desc: "Avec notre support complet",
+        step1Title: "Inscrivez-vous & Complétez Notre Formulaire",
+        step1Desc: "Rejoignez notre liste d'attente et fournissez les informations clés sur vous et votre entreprise pour une expérience de constitution personnalisée.",
+        step2Title: "Recevez des Conseils Personnalisés",
+        step2Desc: "Notre équipe d'experts examinera votre demande et vous guidera à travers la coordination notariale, la configuration bancaire et les étapes de conformité.",
+        step3Title: "Lancez Votre Entreprise Belge",
+        step3Desc: "Avec tous les documents requis déposés et le support en place, vous êtes prêt à démarrer votre entreprise en toute fluidité.",
         
         // Trust Signals
         trustedPartners: "Partenaires de Confiance",
@@ -193,18 +207,25 @@ const translations = {
         // FAQ
         faq: "Questions Fréquentes",
         faqQuestion1: "À qui s'adresse cette plateforme?",
-        faqAnswer1: "Aux entrepreneurs souhaitant constituer leur entreprise rapidement et efficacement, qu'ils soient résidents ou non-résidents.",
+        faqAnswer1: "Aux entrepreneurs souhaitant constituer leur entreprise en Belgique avec des conseils personnalisés et experts—de la formation et la coordination notariale à la banque et la conformité.",
         faqQuestion2: "Quels pays soutenez-vous?",
-        faqAnswer2: "Nous soutenons actuellement les constitutions dans les principaux centres d'affaires. Liste complète à venir.",
-        faqQuestion3: "Qu'inclut le programme de récompenses?",
-        faqAnswer3: "Les premiers utilisateurs obtiennent des remises exclusives, des avantages partenaires et un support prioritaire.",
+        faqAnswer2: "Notre service est actuellement concentré sur les constitutions belges. Les plans futurs incluent l'expansion vers des juridictions anglophones et à faible imposition sélectionnées.",
+        faqQuestion3: "Quels avantages exclusifs reçoivent les premiers utilisateurs?",
+        faqAnswer3: "Les premiers membres de la liste d'attente bénéficient d'un support personnalisé, de remises exclusives des partenaires et d'un accompagnement prioritaire pour un démarrage en douceur.",
         
         // Footer
         footerTitle: "drijft",
-        footerSubtitle: "Votre plateforme tout-en-un de constitution",
+        footerSubtitle: "Votre plateforme tout-en-un pour la constitution experte d'entreprise belge.",
+        footerResources: "Ressources",
+        footerHome: "Accueil",
+        footerHelp: "Aide",
+        footerSupport: "Contacter le Support",
+        footerTerms: "Conditions d'Utilisation",
+        footerPrivacy: "Politique de Confidentialité",
         
         // Modal
         modalTitle: "Rejoindre la Liste",
+        modalDesc: "Entrez votre email pour obtenir un accès anticipé à notre plateforme complète de constitution belge, avec des conseils personnalisés pour la formation d'entreprise, la banque, la conformité et plus encore.",
         emailPlaceholder: "Entrez votre email",
 
         // drijft500 Page
