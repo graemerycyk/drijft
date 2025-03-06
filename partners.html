@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Partner with drijft to help entrepreneurs incorporate their businesses in Belgium. Join our network of trusted partners and grow together.">
+    <meta property="og:title" content="Partner with drijft">
+    <meta property="og:description" content="Partner with drijft to help entrepreneurs incorporate their businesses in Belgium. Join our network of trusted partners and grow together.">
+    <meta property="og:type" content="website">
+    <title>Partner with drijft</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .partners-hero {
+            background: linear-gradient(135deg, #1a365d, #2563eb);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .partners-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .partners-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .partners-grid {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .partner-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .partner-logo {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            padding: 2rem;
+            background: #f8f9fa;
+        }
+
+        .partner-content {
+            padding: 1.5rem;
+        }
+
+        .partner-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a365d;
+        }
+
+        .partner-content p {
+            color: #4b5563;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .benefits-section {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+        }
+
+        .benefits-list {
+            max-width: 800px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .benefit-icon {
+            width: 40px;
+            height: 40px;
+            color: #2563eb;
+        }
+
+        .benefit-text h3 {
+            font-size: 1.25rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-text p {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 0.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: #1a365d;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.75rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .partners-hero h1 {
+                font-size: 2rem;
+            }
+
+            .partners-hero p {
+                font-size: 1rem;
+            }
+
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="header-logo">
+                <img src="images/logo.webp" alt="drijft logo" width="24" height="24">
+                <strong data-i18n="footerTitle">drijft</strong>
+            </a>
+            <nav class="header-nav">
+                <div class="header-links">
+                    <a href="/blog" data-i18n="footerBlog">Blog</a>
+                    <a href="/pricing" data-i18n="footerPricing">Pricing</a>
+                    <a href="/partners" data-i18n="footerPartners">Partners</a>
+                </div>
+                <div class="language-switcher">
+                    <button class="language-btn active" onclick="setLanguage('en')">EN</button>
+                    <button class="language-btn" onclick="setLanguage('nl')">NL</button>
+                    <button class="language-btn" onclick="setLanguage('fr')">FR</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="partners-hero">
+        <div class="container">
+            <h1 data-i18n="partnersTitle">Partner with drijft</h1>
+            <p data-i18n="partnersSubtitle">Join our network of trusted partners and help entrepreneurs succeed in Belgium. Together, we can make business incorporation simpler and more accessible.</p>
+        </div>
+    </section>
+
+    <section class="partners-grid">
+        <div class="partner-card">
+            <img src="images/stripe-logo.svg" alt="Stripe" class="partner-logo">
+            <div class="partner-content">
+                <h2>Stripe</h2>
+                <p data-i18n="stripeDesc">Seamless payment processing and financial services integration for your business needs.</p>
+            </div>
+        </div>
+        <div class="partner-card">
+            <img src="images/wise-logo.svg" alt="Wise" class="partner-logo">
+            <div class="partner-content">
+                <h2>Wise</h2>
+                <p data-i18n="wiseDesc">International banking and money transfer solutions at competitive rates.</p>
+            </div>
+        </div>
+        <div class="partner-card">
+            <img src="images/revolut-logo.svg" alt="Revolut" class="partner-logo">
+            <div class="partner-content">
+                <h2>Revolut</h2>
+                <p data-i18n="revolutDesc">Modern business banking with powerful features and integrations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2 data-i18n="partnerBenefits">Partner Benefits</h2>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-text">
+                        <h3 data-i18n="benefitRevenue">Revenue Sharing</h3>
+                        <p data-i18n="benefitRevenueDesc">Earn competitive commissions on successful referrals and ongoing collaborations.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🤝</div>
+                    <div class="benefit-text">
+                        <h3 data-i18n="benefitNetwork">Network Growth</h3>
+                        <p data-i18n="benefitNetworkDesc">Connect with a growing community of entrepreneurs and business professionals.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📈</div>
+                    <div class="benefit-text">
+                        <h3 data-i18n="benefitExposure">Brand Exposure</h3>
+                        <p data-i18n="benefitExposureDesc">Gain visibility through our marketing channels and partner network.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-text">
+                        <h3 data-i18n="benefitSupport">Dedicated Support</h3>
+                        <p data-i18n="benefitSupportDesc">Get priority access to our partner success team and resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2 data-i18n="becomePartner">Become a Partner</h2>
+            <p data-i18n="becomePartnerDesc">Interested in partnering with us? Fill out the form below and we'll get in touch.</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name" data-i18n="formName">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="company" data-i18n="formCompany">Company</label>
+                    <input type="text" id="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-i18n="formEmail">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-i18n="formMessage">Message</label>
+                    <textarea id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="cta-button" data-i18n="formSubmit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="/" class="footer-logo">
+                    <img src="images/logo.webp" alt="drijft logo" width="24" height="24">
+                    <strong data-i18n="footerTitle">drijft</strong>
+                </a>
+                <p class="footer-description" data-i18n="footerSubtitle">Your all-in-one platform for expert Belgian business incorporation.</p>
+                <p class="footer-copyright">
+                    &copy; <span id="current-year"></span> <a href="/" class="link" data-i18n="footerTitle">drijft</a><br>
+                    All Rights Reserved
+                </p>
+            </div>
+            <div class="footer-section">
+                <div class="footer-title" data-i18n="footerCompany">Company</div>
+                <div class="footer-links">
+                    <a href="/" class="link" data-i18n="footerHome">Home</a>
+                    <a href="/about" class="link" data-i18n="footerAbout">About</a>
+                    <a href="/pricing" class="link" data-i18n="footerPricing">Pricing</a>
+                    <a href="/partners" class="link" data-i18n="footerPartners">Partners</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="footer-title" data-i18n="footerResources">Resources</div>
+                <div class="footer-links">
+                    <a href="/blog" class="link" data-i18n="footerBlog">Blog</a>
+                    <a href="/drijft500" class="link" data-i18n="footerDrijft500">drijft 500</a>
+                    <a href="/rewards" class="link" data-i18n="footerRewards">Rewards</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="footer-title" data-i18n="footerSupport">Support</div>
+                <div class="footer-links">
+                    <a href="mailto:contact@drijft.be" class="link" data-i18n="footerContactUs">Contact Us</a>
+                    <a href="/tos" class="link" data-i18n="footerTerms">Terms of Service</a>
+                    <a href="/privacy" class="link" data-i18n="footerPrivacy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Language handling
+        let currentLanguage = 'en';
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            document.documentElement.setAttribute('lang', lang);
+            
+            const languageButtons = document.querySelectorAll('.language-btn');
+            languageButtons.forEach(button => {
+                if (button.textContent.toLowerCase() === lang.toLowerCase()) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+            
+            updateContent();
+        }
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLanguage][key]) {
+                    if (element.tagName === 'INPUT' && element.getAttribute('placeholder')) {
+                        element.placeholder = translations[currentLanguage][key];
+                    } else {
+                        element.textContent = translations[currentLanguage][key];
+                    }
+                }
+            });
+        }
+
+        // Initialize language based on browser preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const browserLang = navigator.language.split('-')[0];
+            const supportedLanguages = ['en', 'nl', 'fr'];
+            const initialLang = supportedLanguages.includes(browserLang) ? browserLang : 'en';
+            setLanguage(initialLang);
+        });
+
+        // Handle form submission
+        document.querySelector('.contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your interest! We will contact you soon.');
+        });
+    </script>
+</body>
+</html> 

@@ -14,12 +14,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button class="language-btn active" onclick="setLanguage('en')">EN</button>
-        <button class="language-btn" onclick="setLanguage('nl')">NL</button>
-        <button class="language-btn" onclick="setLanguage('fr')">FR</button>
-    </div>
+    <!-- Header Component -->
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="header-logo">
+                <img src="images/logo.webp" alt="drijft logo" width="24" height="24">
+                <strong data-i18n="footerTitle">drijft</strong>
+            </a>
+            <nav class="header-nav">
+                <div class="header-links">
+                    <a href="/blog" data-i18n="footerBlog">Blog</a>
+                    <a href="/pricing" data-i18n="footerPricing">Pricing</a>
+                    <a href="/partners" data-i18n="footerPartners">Partners</a>
+                </div>
+                <div class="language-switcher">
+                    <button class="language-btn active" onclick="setLanguage('en')">EN</button>
+                    <button class="language-btn" onclick="setLanguage('nl')">NL</button>
+                    <button class="language-btn" onclick="setLanguage('fr')">FR</button>
+                </div>
+            </nav>
+        </div>
+    </header>
 
     <header class="hero">
         <div class="container">
@@ -115,28 +130,39 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <a href="#" class="footer-logo">
+                <a href="/" class="footer-logo">
                     <img src="images/logo.webp" alt="drijft logo" width="24" height="24">
                     <strong data-i18n="footerTitle">drijft</strong>
                 </a>
                 <p class="footer-description" data-i18n="footerSubtitle">Your all-in-one platform for expert Belgian business incorporation.</p>
                 <p class="footer-copyright">
-                    &copy; <span id="current-year"></span> <a href="#" class="link" data-i18n="footerTitle">drijft</a><br>
+                    &copy; <span id="current-year"></span> <a href="/" class="link" data-i18n="footerTitle">drijft</a><br>
                     All Rights Reserved
                 </p>
-                <p class="footer-links">
-                    <a href="tos.html" class="link" data-i18n="footerTerms">Terms of Service</a> |
-                    <a href="privacy.html" class="link" data-i18n="footerPrivacy">Privacy Policy</a>
-                </p>
+            </div>
+            <div class="footer-section">
+                <div class="footer-title" data-i18n="footerCompany">Company</div>
+                <div class="footer-links">
+                    <a href="/" class="link" data-i18n="footerHome">Home</a>
+                    <a href="/about" class="link" data-i18n="footerAbout">About</a>
+                    <a href="/pricing" class="link" data-i18n="footerPricing">Pricing</a>
+                    <a href="/partners" class="link" data-i18n="footerPartners">Partners</a>
+                </div>
             </div>
             <div class="footer-section">
                 <div class="footer-title" data-i18n="footerResources">Resources</div>
                 <div class="footer-links">
-                    <a href="drijft500.html" class="link">drijft 500</a>
+                    <a href="/blog" class="link" data-i18n="footerBlog">Blog</a>
+                    <a href="/drijft500" class="link" data-i18n="footerDrijft500">drijft 500</a>
+                    <a href="/rewards" class="link" data-i18n="footerRewards">Rewards</a>
                 </div>
-                <div class="footer-title" style="margin-top: 1rem;" data-i18n="footerHelp">Help</div>
-                <div class="footer-help">
-                    <a href="mailto:contact@drijft.be" class="link" data-i18n="footerSupport">Contact Support</a>
+            </div>
+            <div class="footer-section">
+                <div class="footer-title" data-i18n="footerSupport">Support</div>
+                <div class="footer-links">
+                    <a href="mailto:contact@drijft.be" class="link" data-i18n="footerContactUs">Contact Us</a>
+                    <a href="/tos" class="link" data-i18n="footerTerms">Terms of Service</a>
+                    <a href="/privacy" class="link" data-i18n="footerPrivacy">Privacy Policy</a>
                 </div>
             </div>
         </div>

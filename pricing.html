@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transparent pricing plans for Belgian business incorporation. Choose the right package for your needs with our expert guidance and support.">
+    <meta property="og:title" content="Pricing Plans - drijft">
+    <meta property="og:description" content="Transparent pricing plans for Belgian business incorporation. Choose the right package for your needs with our expert guidance and support.">
+    <meta property="og:type" content="website">
+    <title>Pricing Plans - drijft</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .pricing-hero {
+            background: linear-gradient(135deg, #1a365d, #2563eb);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .pricing-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .pricing-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .pricing-grid {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .pricing-card h2 {
+            color: #1a365d;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-period {
+            font-size: 1rem;
+            color: #6b7280;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .comparison-section {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+        }
+
+        .comparison-table {
+            max-width: 1200px;
+            margin: 2rem auto;
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .comparison-table th {
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-hero h1 {
+                font-size: 2rem;
+            }
+
+            .pricing-hero p {
+                font-size: 1rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="header-logo">
+                <img src="images/logo.webp" alt="drijft logo" width="24" height="24">
+                <strong data-i18n="footerTitle">drijft</strong>
+            </a>
+            <nav class="header-nav">
+                <div class="header-links">
+                    <a href="/blog" data-i18n="footerBlog">Blog</a>
+                    <a href="/pricing" data-i18n="footerPricing">Pricing</a>
+                    <a href="/partners" data-i18n="footerPartners">Partners</a>
+                </div>
+                <div class="language-switcher">
+                    <button class="language-btn active" onclick="setLanguage('en')">EN</button>
+                    <button class="language-btn" onclick="setLanguage('nl')">NL</button>
+                    <button class="language-btn" onclick="setLanguage('fr')">FR</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="pricing-hero">
+        <div class="container">
+            <h1 data-i18n="pricingTitle">Transparent Pricing for Your Business Journey</h1>
+            <p data-i18n="pricingSubtitle">Choose the right package for your needs. All plans include our expert guidance and support throughout your incorporation journey.</p>
+        </div>
+    </section>
+
+    <section class="pricing-grid">
+        <div class="pricing-card">
+            <h2 data-i18n="basicPlan">Basic Plan</h2>
+            <div class="price">€999<span class="price-period">/once</span></div>
+            <ul class="features-list">
+                <li data-i18n="basicFeature1">Company Formation Support</li>
+                <li data-i18n="basicFeature2">Basic Document Templates</li>
+                <li data-i18n="basicFeature3">Email Support</li>
+                <li data-i18n="basicFeature4">Bank Account Setup Guide</li>
+            </ul>
+            <button class="cta-button" data-i18n="chooseBasic">Choose Basic</button>
+        </div>
+
+        <div class="pricing-card">
+            <h2 data-i18n="proPlan">Pro Plan</h2>
+            <div class="price">€1,499<span class="price-period">/once</span></div>
+            <ul class="features-list">
+                <li data-i18n="proFeature1">Everything in Basic</li>
+                <li data-i18n="proFeature2">Priority Support</li>
+                <li data-i18n="proFeature3">Advanced Document Templates</li>
+                <li data-i18n="proFeature4">Compliance Calendar</li>
+                <li data-i18n="proFeature5">Tax Registration Support</li>
+            </ul>
+            <button class="cta-button" data-i18n="choosePro">Choose Pro</button>
+        </div>
+
+        <div class="pricing-card">
+            <h2 data-i18n="enterprisePlan">Enterprise Plan</h2>
+            <div class="price">€2,499<span class="price-period">/once</span></div>
+            <ul class="features-list">
+                <li data-i18n="enterpriseFeature1">Everything in Pro</li>
+                <li data-i18n="enterpriseFeature2">Dedicated Account Manager</li>
+                <li data-i18n="enterpriseFeature3">Custom Legal Templates</li>
+                <li data-i18n="enterpriseFeature4">Full Compliance Support</li>
+                <li data-i18n="enterpriseFeature5">Virtual Office Service</li>
+            </ul>
+            <button class="cta-button" data-i18n="chooseEnterprise">Choose Enterprise</button>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <div class="container">
+            <h2 data-i18n="featureComparison">Feature Comparison</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="feature">Feature</th>
+                        <th data-i18n="basicPlan">Basic</th>
+                        <th data-i18n="proPlan">Pro</th>
+                        <th data-i18n="enterprisePlan">Enterprise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="comparisonFeature1">Company Formation</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="comparisonFeature2">Document Templates</td>
+                        <td>Basic</td>
+                        <td>Advanced</td>
+                        <td>Custom</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="comparisonFeature3">Support Level</td>
+                        <td>Email</td>
+                        <td>Priority</td>
+                        <td>Dedicated</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="comparisonFeature4">Bank Account Setup</td>
+                        <td>Guide</td>
+                        <td>Assisted</td>
+                        <td>Full Support</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="comparisonFeature5">Compliance Support</td>
+                        <td>-</td>
+                        <td>Basic</td>
+                        <td>Full</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="/" class="footer-logo">
+                    <img src="images/logo.webp" alt="drijft logo" width="24" height="24">
+                    <strong data-i18n="footerTitle">drijft</strong>
+                </a>
+                <p class="footer-description" data-i18n="footerSubtitle">Your all-in-one platform for expert Belgian business incorporation.</p>
+                <p class="footer-copyright">
+                    &copy; <span id="current-year"></span> <a href="/" class="link" data-i18n="footerTitle">drijft</a><br>
+                    All Rights Reserved
+                </p>
+            </div>
+            <div class="footer-section">
+                <div class="footer-title" data-i18n="footerCompany">Company</div>
+                <div class="footer-links">
+                    <a href="/" class="link" data-i18n="footerHome">Home</a>
+                    <a href="/about" class="link" data-i18n="footerAbout">About</a>
+                    <a href="/pricing" class="link" data-i18n="footerPricing">Pricing</a>
+                    <a href="/partners" class="link" data-i18n="footerPartners">Partners</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="footer-title" data-i18n="footerResources">Resources</div>
+                <div class="footer-links">
+                    <a href="/blog" class="link" data-i18n="footerBlog">Blog</a>
+                    <a href="/drijft500" class="link" data-i18n="footerDrijft500">drijft 500</a>
+                    <a href="/rewards" class="link" data-i18n="footerRewards">Rewards</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="footer-title" data-i18n="footerSupport">Support</div>
+                <div class="footer-links">
+                    <a href="mailto:contact@drijft.be" class="link" data-i18n="footerContactUs">Contact Us</a>
+                    <a href="/tos" class="link" data-i18n="footerTerms">Terms of Service</a>
+                    <a href="/privacy" class="link" data-i18n="footerPrivacy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Language handling
+        let currentLanguage = 'en';
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            document.documentElement.setAttribute('lang', lang);
+            
+            const languageButtons = document.querySelectorAll('.language-btn');
+            languageButtons.forEach(button => {
+                if (button.textContent.toLowerCase() === lang.toLowerCase()) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+            
+            updateContent();
+        }
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLanguage][key]) {
+                    if (element.tagName === 'INPUT' && element.getAttribute('placeholder')) {
+                        element.placeholder = translations[currentLanguage][key];
+                    } else {
+                        element.textContent = translations[currentLanguage][key];
+                    }
+                }
+            });
+        }
+
+        // Initialize language based on browser preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const browserLang = navigator.language.split('-')[0];
+            const supportedLanguages = ['en', 'nl', 'fr'];
+            const initialLang = supportedLanguages.includes(browserLang) ? browserLang : 'en';
+            setLanguage(initialLang);
+        });
+    </script>
+</body>
+</html> 

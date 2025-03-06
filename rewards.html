@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join drijft's rewards program and earn benefits for referring entrepreneurs to our business incorporation platform.">
+    <meta property="og:title" content="drijft Rewards - Referral Program">
+    <meta property="og:description" content="Join drijft's rewards program and earn benefits for referring entrepreneurs to our business incorporation platform.">
+    <meta property="og:type" content="website">
+    <title>drijft Rewards - Referral Program</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .rewards-hero {
+            background: linear-gradient(135deg, #1a365d, #2563eb);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .rewards-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .rewards-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .how-it-works {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .steps-grid {
+            max-width: 1200px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+        }
+
+        .step-card h3 {
+            color: #1a365d;
+            margin-bottom: 1rem;
+        }
+
+        .step-card p {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .rewards-tiers {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+        }
+
+        .tiers-grid {
+            max-width: 1200px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tier-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .tier-name {
+            font-size: 1.5rem;
+            color: #1a365d;
+            margin-bottom: 1rem;
+        }
+
+        .tier-points {
+            font-size: 2.5rem;
+            color: #2563eb;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .tier-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .tier-benefits li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #4b5563;
+        }
+
+        .tier-benefits li::before {
+            content: "✓";
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .referral-section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .referral-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 0.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: #1a365d;
+        }
+
+        .form-group input {
+            padding: 0.75rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .rewards-hero h1 {
+                font-size: 2rem;
+            }
+
+            .rewards-hero p {
+                font-size: 1rem;
+            }
+
+            .steps-grid,
+            .tiers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="header-logo">
+                <img src="images/logo.webp" alt="drijft logo" width="24" height="24">
+                <strong data-i18n="footerTitle">drijft</strong>
+            </a>
+            <nav class="header-nav">
+                <div class="header-links">
+                    <a href="/blog" data-i18n="footerBlog">Blog</a>
+                    <a href="/pricing" data-i18n="footerPricing">Pricing</a>
+                    <a href="/partners" data-i18n="footerPartners">Partners</a>
+                </div>
+                <div class="language-switcher">
+                    <button class="language-btn active" onclick="setLanguage('en')">EN</button>
+                    <button class="language-btn" onclick="setLanguage('nl')">NL</button>
+                    <button class="language-btn" onclick="setLanguage('fr')">FR</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="rewards-hero">
+        <div class="container">
+            <h1 data-i18n="rewardsTitle">drijft Rewards Program</h1>
+            <p data-i18n="rewardsSubtitle">Earn exclusive rewards and benefits by referring entrepreneurs to our platform. The more successful referrals you make, the more rewards you unlock.</p>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2 data-i18n="howItWorks">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 data-i18n="rewardsStep1">Sign Up</h3>
+                    <p data-i18n="rewardsStep1Desc">Join our rewards program and get your unique referral code.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 data-i18n="rewardsStep2">Share</h3>
+                    <p data-i18n="rewardsStep2Desc">Share your referral code with entrepreneurs looking to incorporate in Belgium.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 data-i18n="rewardsStep3">Earn</h3>
+                    <p data-i18n="rewardsStep3Desc">Earn points for each successful referral and unlock exclusive rewards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rewards-tiers">
+        <div class="container">
+            <h2 data-i18n="rewardsTiers">Rewards Tiers</h2>
+            <div class="tiers-grid">
+                <div class="tier-card">
+                    <div class="tier-name" data-i18n="silverTier">Silver</div>
+                    <div class="tier-points">100+</div>
+                    <ul class="tier-benefits">
+                        <li data-i18n="silverBenefit1">€50 Referral Bonus</li>
+                        <li data-i18n="silverBenefit2">Priority Support</li>
+                        <li data-i18n="silverBenefit3">Exclusive Newsletter</li>
+                    </ul>
+                </div>
+                <div class="tier-card">
+                    <div class="tier-name" data-i18n="goldTier">Gold</div>
+                    <div class="tier-points">500+</div>
+                    <ul class="tier-benefits">
+                        <li data-i18n="goldBenefit1">€100 Referral Bonus</li>
+                        <li data-i18n="goldBenefit2">VIP Support</li>
+                        <li data-i18n="goldBenefit3">Early Access to Features</li>
+                        <li data-i18n="goldBenefit4">Quarterly Strategy Call</li>
+                    </ul>
+                </div>
+                <div class="tier-card">
+                    <div class="tier-name" data-i18n="platinumTier">Platinum</div>
+                    <div class="tier-points">1000+</div>
+                    <ul class="tier-benefits">
+                        <li data-i18n="platinumBenefit1">€200 Referral Bonus</li>
+                        <li data-i18n="platinumBenefit2">Dedicated Account Manager</li>
+                        <li data-i18n="platinumBenefit3">Custom Referral Dashboard</li>
+                        <li data-i18n="platinumBenefit4">Annual Partner Event</li>
+                        <li data-i18n="platinumBenefit5">Co-marketing Opportunities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="referral-section">
+        <div class="container">
+            <h2 data-i18n="startReferring">Start Referring Today</h2>
+            <p data-i18n="referralDesc">Sign up for our rewards program and start earning points for your referrals.</p>
+            <form class="referral-form">
+                <div class="form-group">
+                    <label for="name" data-i18n="formName">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-i18n="formEmail">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <button type="submit" class="cta-button" data-i18n="joinRewards">Join Rewards Program</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="/" class="footer-logo">
+                    <img src="images/logo.webp" alt="drijft logo" width="24" height="24">
+                    <strong data-i18n="footerTitle">drijft</strong>
+                </a>
+                <p class="footer-description" data-i18n="footerSubtitle">Your all-in-one platform for expert Belgian business incorporation.</p>
+                <p class="footer-copyright">
+                    &copy; <span id="current-year"></span> <a href="/" class="link" data-i18n="footerTitle">drijft</a><br>
+                    All Rights Reserved
+                </p>
+            </div>
+            <div class="footer-section">
+                <div class="footer-title" data-i18n="footerCompany">Company</div>
+                <div class="footer-links">
+                    <a href="/" class="link" data-i18n="footerHome">Home</a>
+                    <a href="/about" class="link" data-i18n="footerAbout">About</a>
+                    <a href="/pricing" class="link" data-i18n="footerPricing">Pricing</a>
+                    <a href="/partners" class="link" data-i18n="footerPartners">Partners</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="footer-title" data-i18n="footerResources">Resources</div>
+                <div class="footer-links">
+                    <a href="/blog" class="link" data-i18n="footerBlog">Blog</a>
+                    <a href="/drijft500" class="link" data-i18n="footerDrijft500">drijft 500</a>
+                    <a href="/rewards" class="link" data-i18n="footerRewards">Rewards</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="footer-title" data-i18n="footerSupport">Support</div>
+                <div class="footer-links">
+                    <a href="mailto:contact@drijft.be" class="link" data-i18n="footerContactUs">Contact Us</a>
+                    <a href="/tos" class="link" data-i18n="footerTerms">Terms of Service</a>
+                    <a href="/privacy" class="link" data-i18n="footerPrivacy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Language handling
+        let currentLanguage = 'en';
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            document.documentElement.setAttribute('lang', lang);
+            
+            const languageButtons = document.querySelectorAll('.language-btn');
+            languageButtons.forEach(button => {
+                if (button.textContent.toLowerCase() === lang.toLowerCase()) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+            
+            updateContent();
+        }
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLanguage][key]) {
+                    if (element.tagName === 'INPUT' && element.getAttribute('placeholder')) {
+                        element.placeholder = translations[currentLanguage][key];
+                    } else {
+                        element.textContent = translations[currentLanguage][key];
+                    }
+                }
+            });
+        }
+
+        // Initialize language based on browser preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const browserLang = navigator.language.split('-')[0];
+            const supportedLanguages = ['en', 'nl', 'fr'];
+            const initialLang = supportedLanguages.includes(browserLang) ? browserLang : 'en';
+            setLanguage(initialLang);
+        });
+
+        // Handle form submission
+        document.querySelector('.referral-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for joining our rewards program! We will contact you soon.');
+        });
+    </script>
+</body>
+</html> 
