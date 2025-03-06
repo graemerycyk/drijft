@@ -126,6 +126,12 @@
             padding-top: 2rem;
             border-top: 1px solid #e5e7eb;
             display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .blog-author-header {
+            display: flex;
             align-items: center;
             gap: 1.5rem;
         }
@@ -146,6 +152,22 @@
         .blog-author-info p {
             color: #6b7280;
             line-height: 1.6;
+        }
+
+        .blog-author-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .blog-author-social a {
+            color: #4b5563;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .blog-author-social a:hover {
+            color: #2563eb;
         }
 
         @media (max-width: 768px) {
@@ -211,10 +233,18 @@
         </div>
 
         <footer class="blog-author">
-            <img id="author-image" src="" alt="">
-            <div class="blog-author-info">
-                <h3 id="author-name"></h3>
-                <p id="author-bio"></p>
+            <div class="blog-author-header">
+                <img id="author-image" src="" alt="">
+                <div class="blog-author-info">
+                    <h3 id="author-name"></h3>
+                    <p id="author-bio"></p>
+                    <div class="blog-author-social">
+                        <a href="https://www.linkedin.com/in/graemerycyk" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://x.com/graemerycyk" target="_blank" rel="noopener noreferrer">𝕏</a>
+                        <a href="https://bsky.app/profile/graeme.rycyk.com" target="_blank" rel="noopener noreferrer">Bluesky</a>
+                        <a href="https://www.linkedin.com/company/workanywhereio" target="_blank" rel="noopener noreferrer">Business Enquiries</a>
+                    </div>
+                </div>
             </div>
         </footer>
     </article>
