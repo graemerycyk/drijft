@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest insights and articles about startups, technology, and innovation from drijft">
+    <meta property="og:title" content="drijft Blog - Startup Insights & Innovation">
+    <meta property="og:description" content="Latest insights and articles about startups, technology, and innovation from drijft">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://drijft.be/blog">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <title>drijft Blog - Startup Insights & Innovation</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, #1a365d, #2563eb);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .blog-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .blog-grid {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-card-content {
+            padding: 1.5rem;
+        }
+
+        .blog-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a365d;
+        }
+
+        .blog-card p {
+            color: #4b5563;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .blog-meta {
+            font-size: 0.875rem;
+            color: #6b7280;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .blog-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            background-color: #e0e7ff;
+            color: #3730a3;
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+
+            .blog-hero p {
+                font-size: 1rem;
+            }
+
+            .blog-grid {
+                margin: 2rem auto;
+                padding: 0 1rem;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="language-btn active" onclick="setLanguage('en')">EN</button>
+        <button class="language-btn" onclick="setLanguage('nl')">NL</button>
+        <button class="language-btn" onclick="setLanguage('fr')">FR</button>
+    </div>
+
+    <section class="blog-hero">
+        <div class="container">
+            <h1 data-i18n="blogTitle">Latest Insights</h1>
+            <p data-i18n="blogSubtitle">Discover the latest trends, insights, and stories about startups, technology, and innovation.</p>
+        </div>
+    </section>
+
+    <main class="blog-grid" id="blog-posts">
+        <!-- Blog posts will be populated here -->
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="../index.html" class="footer-logo">
+                    <img src="../images/logo.webp" alt="drijft logo" width="24" height="24">
+                    <strong data-i18n="footerTitle">drijft</strong>
+                </a>
+                <p class="footer-description" data-i18n="footerDescription">
+                    Located in Antwerp, Belgium, we specialize in Full-Stack Product Development Services.
+                </p>
+                <p class="footer-copyright">
+                    &copy; <span id="current-year"></span> <a href="../index.html" class="link" data-i18n="footerTitle">drijft</a><br>
+                    All Rights Reserved
+                </p>
+                <p class="footer-links">
+                    <a href="../tos.html" class="link" data-i18n="footerTerms">Terms of Service</a> |
+                    <a href="../privacy.html" class="link" data-i18n="footerPrivacy">Privacy Policy</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <div class="footer-title" data-i18n="footerResources">Resources</div>
+                <div class="footer-links">
+                    <a href="../index.html" class="link" data-i18n="footerHome">Home</a>
+                </div>
+                <div class="footer-title" style="margin-top: 1rem;" data-i18n="footerHelp">Help</div>
+                <div class="footer-help">
+                    <a href="mailto:support@drijft.be" class="link" data-i18n="footerSupport">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../translations.js"></script>
+    <script>
+        // Function to load and parse blog posts CSV data
+        async function loadBlogPosts() {
+            try {
+                const response = await fetch('../data/blog-posts.csv');
+                const csvText = await response.text();
+                
+                // Split by newlines and parse CSV properly
+                const rows = csvText.split('\n')
+                    .map(row => {
+                        const matches = [];
+                        let field = '';
+                        let inQuotes = false;
+                        
+                        for (let i = 0; i < row.length; i++) {
+                            if (row[i] === '"') {
+                                inQuotes = !inQuotes;
+                            } else if (row[i] === ',' && !inQuotes) {
+                                matches.push(field.trim());
+                                field = '';
+                            } else {
+                                field += row[i];
+                            }
+                        }
+                        matches.push(field.trim());
+                        return matches;
+                    })
+                    .filter(row => row.length > 1);
+                
+                const headers = rows[0];
+                const posts = rows.slice(1);
+
+                // Populate blog grid
+                const blogGrid = document.getElementById('blog-posts');
+                blogGrid.innerHTML = posts.map(post => `
+                    <article class="blog-card">
+                        <img src="${post[4]}" alt="${post[0]}">
+                        <div class="blog-card-content">
+                            <span class="blog-category">${post[2]}</span>
+                            <h2><a href="blog-post.html?id=${post[6]}">${post[0]}</a></h2>
+                            <p>${post[1].substring(0, 150)}...</p>
+                            <div class="blog-meta">
+                                <span>${post[3]}</span>
+                                <span>${new Date(post[5]).toLocaleDateString()}</span>
+                            </div>
+                        </div>
+                    </article>
+                `).join('');
+
+                // Update translations
+                updateContent();
+            } catch (error) {
+                console.error('Error loading blog posts:', error);
+            }
+        }
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Load blog posts when page loads
+        document.addEventListener('DOMContentLoaded', loadBlogPosts);
+
+        // Language handling
+        let currentLanguage = 'en';
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            document.documentElement.setAttribute('lang', lang);
+            
+            const languageButtons = document.querySelectorAll('.language-btn');
+            languageButtons.forEach(button => {
+                if (button.textContent.toLowerCase() === lang.toLowerCase()) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+            
+            updateContent();
+        }
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLanguage][key]) {
+                    if (element.tagName === 'INPUT' && element.getAttribute('placeholder')) {
+                        element.placeholder = translations[currentLanguage][key];
+                    } else {
+                        element.textContent = translations[currentLanguage][key];
+                    }
+                }
+            });
+        }
+
+        // Initialize language based on browser preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const browserLang = navigator.language.split('-')[0];
+            const supportedLanguages = ['en', 'nl', 'fr'];
+            const initialLang = supportedLanguages.includes(browserLang) ? browserLang : 'en';
+            setLanguage(initialLang);
+        });
+    </script>
+</body>
+</html> 

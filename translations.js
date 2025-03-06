@@ -69,7 +69,16 @@ const translations = {
         footerHelp: "Help",
         footerSupport: "Contact Support",
         footerTerms: "Terms of Service",
-        footerPrivacy: "Privacy Policy"
+        footerPrivacy: "Privacy Policy",
+
+        // Blog Section
+        blogTitle: "Latest Insights",
+        blogSubtitle: "Discover the latest trends, insights, and stories about startups, technology, and innovation.",
+        readMore: "Read More",
+        publishedOn: "Published on",
+        authorBy: "By",
+        relatedPosts: "Related Posts",
+        shareArticle: "Share this article",
     },
     nl: {
         // Header
@@ -141,7 +150,16 @@ const translations = {
         footerHelp: "Help",
         footerSupport: "Contact Support",
         footerTerms: "Algemene Voorwaarden",
-        footerPrivacy: "Privacybeleid"
+        footerPrivacy: "Privacybeleid",
+
+        // Blog Section
+        blogTitle: "Laatste Inzichten",
+        blogSubtitle: "Ontdek de laatste trends, inzichten en verhalen over startups, technologie en innovatie.",
+        readMore: "Lees Meer",
+        publishedOn: "Gepubliceerd op",
+        authorBy: "Door",
+        relatedPosts: "Gerelateerde Artikelen",
+        shareArticle: "Deel dit artikel",
     },
     fr: {
         // Header
@@ -213,6 +231,15 @@ const translations = {
         footerHelp: "Aide",
         footerSupport: "Contacter le Support",
         footerTerms: "Conditions d'Utilisation",
-        footerPrivacy: "Politique de Confidentialité"
+        footerPrivacy: "Politique de Confidentialité",
+
+        // Blog Section
+        blogTitle: "Derniers Aperçus",
+        blogSubtitle: "Découvrez les dernières tendances, perspectives et histoires sur les startups, la technologie et l'innovation.",
+        readMore: "Lire Plus",
+        publishedOn: "Publié le",
+        authorBy: "Par",
+        relatedPosts: "Articles Connexes",
+        shareArticle: "Partager cet article",
     }
 }; 
