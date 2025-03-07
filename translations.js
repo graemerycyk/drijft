@@ -56,7 +56,7 @@ const translations = {
         
         // Modal
         modalTitle: "Join the Waitlist",
-        modalDesc: "Enter your email to secure early access to our comprehensive Belgian incorporation platform, complete with personalized guidance for company formation, banking, compliance, and more.",
+        modalDesc: "Enter your email to secure early access to our comprehensive Belgian incorporation platform, complete with personalized guidance for company formation, banking, compliance, and more. If you have questions about forming your company, <a href=\"mailto:waitlist@drijft.be\" class=\"email-link\">contact our team</a>.",
         emailPlaceholder: "Enter your email",
 
         // drijft500 Page
@@ -151,7 +151,7 @@ const translations = {
         
         // Modal
         modalTitle: "Schrijf Je In",
-        modalDesc: "Voer uw e-mail in om vroege toegang te krijgen tot ons uitgebreide Belgische oprichtingsplatform, compleet met persoonlijke begeleiding voor bedrijfsoprichting, bankieren, compliance en meer.",
+        modalDesc: "Voer uw e-mail in om vroege toegang te krijgen tot ons uitgebreide Belgische oprichtingsplatform, compleet met persoonlijke begeleiding voor bedrijfsoprichting, bankieren, compliance en meer. Als u vragen heeft over het oprichten van uw bedrijf, <a href=\"mailto:waitlist@drijft.be\" class=\"email-link\">neem contact op met ons team</a>.",
         emailPlaceholder: "Voer je e-mail in",
 
         // drijft500 Page
@@ -246,7 +246,7 @@ const translations = {
         
         // Modal
         modalTitle: "Rejoindre la Liste",
-        modalDesc: "Entrez votre email pour obtenir un accès anticipé à notre plateforme complète de constitution belge, avec des conseils personnalisés pour la formation d'entreprise, la banque, la conformité et plus encore.",
+        modalDesc: "Entrez votre email pour obtenir un accès anticipé à notre plateforme complète de constitution belge, avec des conseils personnalisés pour la formation d'entreprise, la banque, la conformité et plus encore. Si vous avez des questions sur la constitution de votre entreprise, <a href=\"mailto:waitlist@drijft.be\" class=\"email-link\">contactez notre équipe</a>.",
         emailPlaceholder: "Entrez votre email",
 
         // drijft500 Page

@@ -36,7 +36,6 @@ function updateContent() {
 const modal = document.getElementById('waitlistModal');
 const btn = document.getElementById('joinWaitlistBtn');
 const span = document.getElementsByClassName('close-modal')[0];
-const form = document.getElementById('waitlistForm');
 
 btn.onclick = () => modal.style.display = "block";
 span.onclick = () => modal.style.display = "none";
@@ -44,15 +43,6 @@ window.onclick = (event) => {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
-
-form.onsubmit = (e) => {
-    e.preventDefault();
-    const email = document.getElementById('emailInput').value;
-    // Here you would typically send this to your backend
-    console.log('Email submitted:', email);
-    modal.style.display = "none";
-    alert('Thank you for joining the waitlist!');
 }
 
 // Initialize language
